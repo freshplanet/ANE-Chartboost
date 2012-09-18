@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39CD1F9F160753D0006D8EB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1F9E160753D0006D8EB1 /* Foundation.framework */; };
+		39CD1FA1160753D0006D8EB1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FA0160753D0006D8EB1 /* CoreFoundation.framework */; };
+		39CD1FA3160753D0006D8EB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FA2160753D0006D8EB1 /* UIKit.framework */; };
+		39CD1FA5160753D0006D8EB1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FA4160753D0006D8EB1 /* MobileCoreServices.framework */; };
+		39CD1FA7160753D0006D8EB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FA6160753D0006D8EB1 /* CoreGraphics.framework */; };
+		39CD1FA9160753D0006D8EB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FA8160753D0006D8EB1 /* SystemConfiguration.framework */; };
+		39CD1FAB160753D0006D8EB1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FAA160753D0006D8EB1 /* AudioToolbox.framework */; };
+		39CD1FAD160753D0006D8EB1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FAC160753D0006D8EB1 /* CFNetwork.framework */; };
+		39CD1FAF160753D0006D8EB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FAE160753D0006D8EB1 /* QuartzCore.framework */; };
+		39CD1FB1160753D0006D8EB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FB0160753D0006D8EB1 /* OpenGLES.framework */; };
+		39CD1FB3160753D0006D8EB1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FB2160753D0006D8EB1 /* CoreLocation.framework */; };
+		39CD1FB5160753D0006D8EB1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FB4160753D0006D8EB1 /* CoreMedia.framework */; };
+		39CD1FB7160753D0006D8EB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FB6160753D0006D8EB1 /* CoreVideo.framework */; };
+		39CD1FB9160753D0006D8EB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FB8160753D0006D8EB1 /* AVFoundation.framework */; };
+		39CD1FBB160753D0006D8EB1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FBA160753D0006D8EB1 /* Security.framework */; };
+		39CD1FC1160753D0006D8EB1 /* AirChartboost.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD1FC0160753D0006D8EB1 /* AirChartboost.m */; };
+		39CD1FCD16075476006D8EB1 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 39CD1FCC16075476006D8EB1 /* FlashRuntimeExtensions.h */; };
+		39CD1FD91607555D006D8EB1 /* CBAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 39CD1FD51607555D006D8EB1 /* CBAnalytics.h */; };
+		39CD1FDA1607555D006D8EB1 /* Chartboost.h in Headers */ = {isa = PBXBuildFile; fileRef = 39CD1FD61607555D006D8EB1 /* Chartboost.h */; };
+		39CD1FDB1607555D006D8EB1 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FD71607555D006D8EB1 /* libChartboost.a */; };
+		39CD1FDD160755FA006D8EB1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FDC160755FA006D8EB1 /* StoreKit.framework */; };
+		39CD1FDF1607560E006D8EB1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CD1FDE1607560E006D8EB1 /* GameKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39CD1F9B160753D0006D8EB1 /* libAirChartboost.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAirChartboost.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		39CD1F9E160753D0006D8EB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		39CD1FA0160753D0006D8EB1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		39CD1FA2160753D0006D8EB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		39CD1FA4160753D0006D8EB1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		39CD1FA6160753D0006D8EB1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		39CD1FA8160753D0006D8EB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		39CD1FAA160753D0006D8EB1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		39CD1FAC160753D0006D8EB1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		39CD1FAE160753D0006D8EB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		39CD1FB0160753D0006D8EB1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		39CD1FB2160753D0006D8EB1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		39CD1FB4160753D0006D8EB1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		39CD1FB6160753D0006D8EB1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		39CD1FB8160753D0006D8EB1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		39CD1FBA160753D0006D8EB1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		39CD1FBE160753D0006D8EB1 /* AirChartboost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirChartboost-Prefix.pch"; sourceTree = "<group>"; };
+		39CD1FBF160753D0006D8EB1 /* AirChartboost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirChartboost.h; sourceTree = "<group>"; };
+		39CD1FC0160753D0006D8EB1 /* AirChartboost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirChartboost.m; sourceTree = "<group>"; };
+		39CD1FCC16075476006D8EB1 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = "/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/include/FlashRuntimeExtensions.h"; sourceTree = "<absolute>"; };
+		39CD1FD51607555D006D8EB1 /* CBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAnalytics.h; sourceTree = "<group>"; };
+		39CD1FD61607555D006D8EB1 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
+		39CD1FD71607555D006D8EB1 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
+		39CD1FD81607555D006D8EB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		39CD1FDC160755FA006D8EB1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		39CD1FDE1607560E006D8EB1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39CD1F98160753D0006D8EB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39CD1FDF1607560E006D8EB1 /* GameKit.framework in Frameworks */,
+				39CD1FDD160755FA006D8EB1 /* StoreKit.framework in Frameworks */,
+				39CD1F9F160753D0006D8EB1 /* Foundation.framework in Frameworks */,
+				39CD1FA1160753D0006D8EB1 /* CoreFoundation.framework in Frameworks */,
+				39CD1FA3160753D0006D8EB1 /* UIKit.framework in Frameworks */,
+				39CD1FA5160753D0006D8EB1 /* MobileCoreServices.framework in Frameworks */,
+				39CD1FA7160753D0006D8EB1 /* CoreGraphics.framework in Frameworks */,
+				39CD1FA9160753D0006D8EB1 /* SystemConfiguration.framework in Frameworks */,
+				39CD1FAB160753D0006D8EB1 /* AudioToolbox.framework in Frameworks */,
+				39CD1FAD160753D0006D8EB1 /* CFNetwork.framework in Frameworks */,
+				39CD1FAF160753D0006D8EB1 /* QuartzCore.framework in Frameworks */,
+				39CD1FB1160753D0006D8EB1 /* OpenGLES.framework in Frameworks */,
+				39CD1FB3160753D0006D8EB1 /* CoreLocation.framework in Frameworks */,
+				39CD1FB5160753D0006D8EB1 /* CoreMedia.framework in Frameworks */,
+				39CD1FB7160753D0006D8EB1 /* CoreVideo.framework in Frameworks */,
+				39CD1FB9160753D0006D8EB1 /* AVFoundation.framework in Frameworks */,
+				39CD1FBB160753D0006D8EB1 /* Security.framework in Frameworks */,
+				39CD1FDB1607555D006D8EB1 /* libChartboost.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39CD1F90160753D0006D8EB1 = {
+			isa = PBXGroup;
+			children = (
+				39CD1FBC160753D0006D8EB1 /* AirChartboost */,
+				39CD1F9D160753D0006D8EB1 /* Frameworks */,
+				39CD1F9C160753D0006D8EB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39CD1F9C160753D0006D8EB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39CD1F9B160753D0006D8EB1 /* libAirChartboost.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39CD1F9D160753D0006D8EB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39CD1FD41607555D006D8EB1 /* Chartboost */,
+				39CD1F9E160753D0006D8EB1 /* Foundation.framework */,
+				39CD1FA0160753D0006D8EB1 /* CoreFoundation.framework */,
+				39CD1FA2160753D0006D8EB1 /* UIKit.framework */,
+				39CD1FA4160753D0006D8EB1 /* MobileCoreServices.framework */,
+				39CD1FA6160753D0006D8EB1 /* CoreGraphics.framework */,
+				39CD1FA8160753D0006D8EB1 /* SystemConfiguration.framework */,
+				39CD1FAA160753D0006D8EB1 /* AudioToolbox.framework */,
+				39CD1FAC160753D0006D8EB1 /* CFNetwork.framework */,
+				39CD1FAE160753D0006D8EB1 /* QuartzCore.framework */,
+				39CD1FB0160753D0006D8EB1 /* OpenGLES.framework */,
+				39CD1FB2160753D0006D8EB1 /* CoreLocation.framework */,
+				39CD1FB4160753D0006D8EB1 /* CoreMedia.framework */,
+				39CD1FB6160753D0006D8EB1 /* CoreVideo.framework */,
+				39CD1FB8160753D0006D8EB1 /* AVFoundation.framework */,
+				39CD1FDE1607560E006D8EB1 /* GameKit.framework */,
+				39CD1FBA160753D0006D8EB1 /* Security.framework */,
+				39CD1FDC160755FA006D8EB1 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39CD1FBC160753D0006D8EB1 /* AirChartboost */ = {
+			isa = PBXGroup;
+			children = (
+				39CD1FBF160753D0006D8EB1 /* AirChartboost.h */,
+				39CD1FC0160753D0006D8EB1 /* AirChartboost.m */,
+				39CD1FBD160753D0006D8EB1 /* Supporting Files */,
+			);
+			path = AirChartboost;
+			sourceTree = "<group>";
+		};
+		39CD1FBD160753D0006D8EB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39CD1FCC16075476006D8EB1 /* FlashRuntimeExtensions.h */,
+				39CD1FBE160753D0006D8EB1 /* AirChartboost-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39CD1FD41607555D006D8EB1 /* Chartboost */ = {
+			isa = PBXGroup;
+			children = (
+				39CD1FD51607555D006D8EB1 /* CBAnalytics.h */,
+				39CD1FD61607555D006D8EB1 /* Chartboost.h */,
+				39CD1FD71607555D006D8EB1 /* libChartboost.a */,
+				39CD1FD81607555D006D8EB1 /* README.md */,
+			);
+			path = Chartboost;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		39CD1F99160753D0006D8EB1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39CD1FCD16075476006D8EB1 /* FlashRuntimeExtensions.h in Headers */,
+				39CD1FD91607555D006D8EB1 /* CBAnalytics.h in Headers */,
+				39CD1FDA1607555D006D8EB1 /* Chartboost.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		39CD1F9A160753D0006D8EB1 /* AirChartboost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39CD1FC5160753D0006D8EB1 /* Build configuration list for PBXNativeTarget "AirChartboost" */;
+			buildPhases = (
+				39CD1F97160753D0006D8EB1 /* Sources */,
+				39CD1F98160753D0006D8EB1 /* Frameworks */,
+				39CD1F99160753D0006D8EB1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirChartboost;
+			productName = AirChartboost;
+			productReference = 39CD1F9B160753D0006D8EB1 /* libAirChartboost.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39CD1F92160753D0006D8EB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 39CD1F95160753D0006D8EB1 /* Build configuration list for PBXProject "AirChartboost" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 39CD1F90160753D0006D8EB1;
+			productRefGroup = 39CD1F9C160753D0006D8EB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39CD1F9A160753D0006D8EB1 /* AirChartboost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39CD1F97160753D0006D8EB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39CD1FC1160753D0006D8EB1 /* AirChartboost.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		39CD1FC3160753D0006D8EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "/Applications/Adobe Flash Builder 4.6/sdks/4.6.0air32/include/";
+			};
+			name = Debug;
+		};
+		39CD1FC4160753D0006D8EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "/Applications/Adobe Flash Builder 4.6/sdks/4.6.0air32/include/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39CD1FC6160753D0006D8EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AirChartboost.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirChartboost/AirChartboost-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Chartboost\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		39CD1FC7160753D0006D8EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AirChartboost.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirChartboost/AirChartboost-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Chartboost\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39CD1F95160753D0006D8EB1 /* Build configuration list for PBXProject "AirChartboost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39CD1FC3160753D0006D8EB1 /* Debug */,
+				39CD1FC4160753D0006D8EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39CD1FC5160753D0006D8EB1 /* Build configuration list for PBXNativeTarget "AirChartboost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39CD1FC6160753D0006D8EB1 /* Debug */,
+				39CD1FC7160753D0006D8EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39CD1F92160753D0006D8EB1 /* Project object */;
+}
