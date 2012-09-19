@@ -27,6 +27,12 @@ On Android, you should add the following activity in your application descriptor
     ```
 
 
+Usage
+-----
+
+Most features from Chartboost SDK are replicated and documented in the __AirChartboost__ Actionscript class. Note that Chartboost's _More Apps_ feature is not implemented at this point.
+
+
 Build script
 ---------
 
