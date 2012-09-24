@@ -21,6 +21,7 @@ package com.freshplanet.ane
 	import flash.events.EventDispatcher;
 	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
+	import flash.system.Capabilities;
 	
 	/**
 	 * AirChartboost replicates Chartboost SDK APIs.<br><br>
@@ -53,7 +54,7 @@ package com.freshplanet.ane
 				} 
 				else
 				{
-					trace('[AirChartboost] Error - Extension Context is null.');
+					trace('[Chartboost] Error - Extension Context is null.');
 				}
 				_instance = this;
 			}
@@ -76,6 +77,15 @@ package com.freshplanet.ane
 		// --------------------------------------------------------------------------------------//
 		
 		/**
+		 * Return true if Chartboost is supported on the current device
+		 * (iOS and Android), false otherwise.
+		 */
+		public function get isChartboostSupported() : Boolean
+		{
+			return Capabilities.manufacturer.indexOf('iOS') > -1 || Capabilities.manufacturer.indexOf('Android') > -1;
+		}
+		
+		/**
 		 * Notify the beginning of a user session
 		 * 
 		 * @param appID String: Your Chartboost application ID.
@@ -83,7 +93,8 @@ package com.freshplanet.ane
 		 */
 		public function startSession( appID : String, appSignature : String ) : void
 		{
-			extCtx.call('startSession', appID, appSignature);
+			if (isChartboostSupported)
+				extCtx.call('startSession', appID, appSignature);
 		}
 		
 		/**
@@ -93,8 +104,11 @@ package com.freshplanet.ane
 		 */
 		public function showInterstitial( location : String = null ) : void
 		{
-			if (location) extCtx.call('showInterstitial', location);
-			else extCtx.call('showInterstitial');
+			if (isChartboostSupported)
+			{
+				if (location) extCtx.call('showInterstitial', location);
+				else extCtx.call('showInterstitial');
+			}
 		}
 		
 		/**
@@ -104,8 +118,11 @@ package com.freshplanet.ane
 		 */
 		public function cacheInterstitial( location : String = null ) : void
 		{
-			if (location) extCtx.call('cacheInterstitial', location);
-			else extCtx.call('cacheInterstitial');
+			if (isChartboostSupported)
+			{
+				if (location) extCtx.call('cacheInterstitial', location);
+				else extCtx.call('cacheInterstitial');
+			}
 		}
 		
 		/**
@@ -115,8 +132,12 @@ package com.freshplanet.ane
 		 */
 		public function hasCachedInterstitial( location : String = null ) : Boolean
 		{
-			if (location) return extCtx.call('hasCachedInterstitial', location);
-			else return extCtx.call('hasCachedInterstitial');
+			if (isChartboostSupported)
+			{
+				if (location) return extCtx.call('hasCachedInterstitial', location);
+				else return extCtx.call('hasCachedInterstitial');
+			}
+			else return false;
 		}
 		
 		
@@ -153,7 +174,7 @@ package com.freshplanet.ane
 					break;
 				
 				case "LOGGING":
-					trace('[AirChartboost] ' + event.level);
+					trace('[Chartboost] ' + event.level);
 			}
 			
 			if (e) dispatchEvent(e);
