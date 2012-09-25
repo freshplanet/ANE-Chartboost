@@ -1,7 +1,7 @@
 //
 //  Chartboost.h
 //  Chartboost
-//  3.0.5
+//  3.0.7
 //
 //  Created by Kenneth Ballenegger on 8/1/11.
 //  Copyright 2011 Chartboost. All rights reserved.
@@ -55,13 +55,6 @@
 
 // Show the More Apps page
 - (void)showMoreApps;
-
-
-// Disables identity tracking for this device.
-// Warning: prevents ads from being shown, do not use unless you know what you're doing.
-// This property is persistent -- it will stick around across sessions
-@property (getter = isIdentityTrackingDisabledOnThisDevice)
-BOOL identityTrackingDisabledOnThisDevice;
 
 @end
 

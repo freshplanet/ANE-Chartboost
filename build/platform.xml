@@ -1,6 +1,7 @@
 <platform xmlns="http://ns.adobe.com/air/extension/3.1">
     <sdkVersion>4.3</sdkVersion>
     <linkerOptions>
+        <option>-framework AdSupport</option>
         <option>-framework GameKit</option>
     	<option>-framework StoreKit</option>
     </linkerOptions> 
