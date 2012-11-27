@@ -5,7 +5,7 @@ package com.freshplanet.ane
 	/**
 	 * AirChartboostEvent replicates Chartboost SDK delegate protocol.<br><br>
 	 * 
-	 * Notes that Chartboost "More Apps" feature is not implemented yet.
+	 * Note that Chartboost "More Apps" feature is not implemented yet.
 	 * 
 	 * @see #DID_DISMISS_INTERSTITIAL
 	 * @see #DID_CLOSE_INTERSTITIAL
@@ -52,11 +52,7 @@ package com.freshplanet.ane
 		 */
 		public static const DID_CACHE_INTERSTITIAL:String = "DidCacheInterstitial";
 		
-		/**
-		 * Name of the location related to this event.<br><br>
-		 * 
-		 * Note that this property is never set on Android.
-		 */
+		/** Name of the location related to this event. */
 		public var location:String;
 		
 		public function AirChartboostEvent(type:String, location:String=null, bubbles:Boolean=false, cancelable:Boolean=false)

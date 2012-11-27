@@ -18,20 +18,14 @@
 
 package com.freshplanet.ane.AirChartboost.functions;
 
-import android.util.Log;
-
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
-import com.chartboost.sdk.ChartBoost;
+import com.chartboost.sdk.Chartboost;
+import com.freshplanet.ane.AirChartboost.AirChartboostExtension;
 
-/**
- * Example function
- */
 public class CacheInterstitialFunction implements FREFunction 
 {
-	private static String TAG = "AirChartboost";
-	
 	public FREObject call(FREContext context, FREObject[] args) 
 	{
 		if (args.length > 0)
@@ -42,17 +36,17 @@ public class CacheInterstitialFunction implements FREFunction
 			{
 				location = args[0].getAsString();
 			}
-			catch (Exception exception)
+			catch (Exception e)
 			{
-				Log.d(TAG, exception.getLocalizedMessage());
+				AirChartboostExtension.log(e.getMessage());
 				return null;
 			}
 			
-			ChartBoost.getSharedChartBoost(context.getActivity()).cacheInterstitial(location);
+			Chartboost.sharedChartboost().cacheInterstitial(location);
 		}
 		else
 		{
-			ChartBoost.getSharedChartBoost(context.getActivity()).cacheInterstitial();
+			Chartboost.sharedChartboost().cacheInterstitial();
 		}
 		
 		return null;

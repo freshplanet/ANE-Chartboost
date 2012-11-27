@@ -18,87 +18,35 @@
 
 package com.freshplanet.ane.AirChartboost.functions;
 
-import android.util.Log;
-import android.view.View;
-
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
-import com.chartboost.sdk.ChartBoost;
-import com.chartboost.sdk.ChartBoostDelegate;
+import com.chartboost.sdk.Chartboost;
 import com.freshplanet.ane.AirChartboost.AirChartboostDelegate;
 import com.freshplanet.ane.AirChartboost.AirChartboostExtension;
 
-/**
- * Example function
- */
 public class StartSessionFunction implements FREFunction 
-{
-	private static String TAG = "AirChartboost";
-	
+{	
 	public FREObject call(FREContext context, FREObject[] args) 
 	{
-		// Retrieve the app ID
+		// Retrieve the parameters
 		String appId = null;
-		try
-		{
-			appId = args[0].getAsString();
-		}
-		catch (Exception exception)
-		{
-			Log.d(TAG, exception.getLocalizedMessage());
-			return null;
-		}
-		
-		// Retrieve the app signature
 		String appSignature = null;
 		try
 		{
+			appId = args[0].getAsString();
 			appSignature = args[1].getAsString();
 		}
-		catch (Exception exception)
+		catch (Exception e)
 		{
-			Log.d(TAG, exception.getLocalizedMessage());
+			AirChartboostExtension.log(e.getMessage());
 			return null;
 		}
 		
-		ChartBoost chartboost = ChartBoost.getSharedChartBoost(context.getActivity());
-		
-		/*ChartBoostDelegate delegate = new ChartBoostDelegate() {
-			@Override
-			public void didCloseInterstitial(View interstitialView)
-			{
-				Log.d(TAG, "Close Interstitial");
-				try
-				{
-					AirChartboostExtension.context.dispatchStatusEventAsync("DidCloseInterstitial", "");
-				}
-				catch (Exception exception)
-				{
-					Log.d(TAG, "Error: " + exception.getLocalizedMessage());
-				}
-			}
-			
-			@Override
-			public void didFailToLoadInterstitial()
-			{
-				Log.d(TAG, "Fail to load Interstitial");
-				try
-				{
-					AirChartboostExtension.context.dispatchStatusEventAsync("DidFailToLoadInterstitial", "");
-				}
-				catch (Exception exception)
-				{
-					Log.d(TAG, "Error: " + exception.getLocalizedMessage());
-					exception.printStackTrace();
-				}
-			}
-		};*/
-		chartboost.setDelegate(new AirChartboostDelegate());
-		
-		chartboost.setAppId(appId);
-		chartboost.setAppSignature(appSignature);
-		chartboost.install();
+		// Start Chartboost session
+		Chartboost cb = Chartboost.sharedChartboost();
+		cb.onCreate(context.getActivity(), appId, appSignature, new AirChartboostDelegate());
+		cb.startSession();
 		
 		return null;
 	}
