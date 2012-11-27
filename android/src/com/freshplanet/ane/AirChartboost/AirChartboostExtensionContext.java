@@ -22,8 +22,6 @@ package com.freshplanet.ane.AirChartboost;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.util.Log;
-
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.freshplanet.ane.AirChartboost.functions.CacheInterstitialFunction;
@@ -33,32 +31,22 @@ import com.freshplanet.ane.AirChartboost.functions.StartSessionFunction;
 
 public class AirChartboostExtensionContext extends FREContext
 {
-	private static String TAG = "[AirChartboost]";
-	
-	public AirChartboostExtensionContext()
-	{
-		Log.d(TAG, "Creating Extension Context");
-	}
-	
 	@Override
 	public void dispose() 
 	{
-		Log.d(TAG, "Disposing Extension Context");
 		AirChartboostExtension.context = null;
 	}
 
-	/**
-	 * Registers AS function name to Java Function Class
-	 */
 	@Override
 	public Map<String, FREFunction> getFunctions() 
 	{
-		Log.d(TAG, "Registering Extension Functions");
-		Map<String, FREFunction> functionMap = new HashMap<String, FREFunction>();
-		functionMap.put("startSession", new StartSessionFunction());
-		functionMap.put("showInterstitial", new ShowInterstitialFunction());
-		functionMap.put("cacheInterstitial", new CacheInterstitialFunction());
-		functionMap.put("hasCachedInterstitial", new HasCachedInterstitialFunction());
-		return functionMap;	
+		Map<String, FREFunction> functions = new HashMap<String, FREFunction>();
+		
+		functions.put("startSession", new StartSessionFunction());
+		functions.put("showInterstitial", new ShowInterstitialFunction());
+		functions.put("cacheInterstitial", new CacheInterstitialFunction());
+		functions.put("hasCachedInterstitial", new HasCachedInterstitialFunction());
+		
+		return functions;	
 	}
 }

@@ -18,21 +18,15 @@
 
 package com.freshplanet.ane.AirChartboost.functions;
 
-import android.util.Log;
-
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 import com.adobe.fre.FREWrongThreadException;
-import com.chartboost.sdk.ChartBoost;
+import com.chartboost.sdk.Chartboost;
+import com.freshplanet.ane.AirChartboost.AirChartboostExtension;
 
-/**
- * Example function
- */
 public class HasCachedInterstitialFunction implements FREFunction 
 {
-	private static String TAG = "AirChartboost";
-	
 	public FREObject call(FREContext context, FREObject[] args) 
 	{
 		Boolean hasCachedInterstital;
@@ -44,17 +38,17 @@ public class HasCachedInterstitialFunction implements FREFunction
 			{
 				location = args[0].getAsString();
 			}
-			catch (Exception exception)
+			catch (Exception e)
 			{
-				Log.d(TAG, exception.getLocalizedMessage());
+				AirChartboostExtension.log(e.getMessage());
 				return null;
 			}
 			
-			hasCachedInterstital = ChartBoost.getSharedChartBoost(context.getActivity()).hasCachedInterstitial(location);
+			hasCachedInterstital = Chartboost.sharedChartboost().hasCachedInterstitial(location);
 		}
 		else
 		{
-			hasCachedInterstital = ChartBoost.getSharedChartBoost(context.getActivity()).hasCachedInterstitial();
+			hasCachedInterstital = Chartboost.sharedChartboost().hasCachedInterstitial();
 		}
 		
 		// Return the result (true if an interstitial is cached, false otherwise)
@@ -62,9 +56,9 @@ public class HasCachedInterstitialFunction implements FREFunction
 		{
 			return FREObject.newObject(hasCachedInterstital);
 		}
-		catch (FREWrongThreadException exception)
+		catch (FREWrongThreadException e)
 		{
-			Log.d(TAG, exception.getLocalizedMessage());
+			AirChartboostExtension.log(e.getMessage());
 			return null;
 		}
 	}
