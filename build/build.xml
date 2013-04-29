@@ -69,6 +69,7 @@
         </pathconvert>
 
         <exec executable="${flex.sdk}/bin/compc${bin.ext}" failonerror="true">
+            <env key="AIR_SDK_HOME" value="${flex.sdk}"/>
             <arg line='-source-path ../actionscript/src'/>
             <arg line='-output ../temp/swc/${name}.swc'/>
             <arg line='-swf-version=14'/>
@@ -86,6 +87,7 @@
     <!-- Package -->
     <target name="package" description="Create the extension package">
         <exec executable="${flex.sdk}/bin/adt${bin.ext}" failonerror="true" dir="../temp">
+            <env key="AIR_SDK_HOME" value="${flex.sdk}"/>
             <arg value="-package"/>
             <arg value="-target"/>
             <arg value="ane"/>
