@@ -207,8 +207,8 @@ void AirChartboostExtInitializer(void** extDataToSet, FREContextInitializer* ctx
     NSLog(@"Entering AirChartboostExtInitializer()");
 
     *extDataToSet = NULL;
-    *ctxInitializerToSet = &ContextInitializer;
-    *ctxFinalizerToSet = &ContextFinalizer;
+    *ctxInitializerToSet = &AirChartboostContextInitializer;
+    *ctxFinalizerToSet = &AirChartboostContextFinalizer;
 
     NSLog(@"Exiting AirChartboostExtInitializer()");
 }
@@ -227,12 +227,12 @@ void AirChartboostExtFinalizer(void* extData)
     return;
 }
 
-/* ContextInitializer()
+/* AirChartboostContextInitializer()
  * The context initializer is called when the runtime creates the extension context instance.
  */
-void ContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
+void AirChartboostContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
 {
-    NSLog(@"Entering ContextInitializer()");
+    NSLog(@"Entering AirChartboostContextInitializer()");
 
     /* The following code describes the functions that are exposed by this native extension to the ActionScript code.
      * As a sample, the function isSupported is being provided.
@@ -261,20 +261,20 @@ void ContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, u
 
     AirChartboostCtx = ctx;
 
-    NSLog(@"Exiting ContextInitializer()");
+    NSLog(@"Exiting AirChartboostContextInitializer()");
 }
 
-/* ContextFinalizer()
+/* AirChartboostContextFinalizer()
  * The context finalizer is called when the extension's ActionScript code
  * calls the ExtensionContext instance's dispose() method.
- * If the AIR runtime garbage collector disposes of the ExtensionContext instance, the runtime also calls ContextFinalizer().
+ * If the AIR runtime garbage collector disposes of the ExtensionContext instance, the runtime also calls AirChartboostContextFinalizer().
  */
-void ContextFinalizer(FREContext ctx) 
+void AirChartboostContextFinalizer(FREContext ctx) 
 {
-    NSLog(@"Entering ContextFinalizer()");
+    NSLog(@"Entering AirChartboostContextFinalizer()");
 
     // Nothing to clean up.
-    NSLog(@"Exiting ContextFinalizer()");
+    NSLog(@"Exiting AirChartboostContextFinalizer()");
     return;
 }
 

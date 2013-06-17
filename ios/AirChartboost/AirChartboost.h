@@ -51,16 +51,16 @@ void AirChartboostExtInitializer(void** extDataToSet, FREContextInitializer* ctx
 */
 void AirChartboostExtFinalizer(void* extData);
 
-/* ContextInitializer()
+/* AirChartboostContextInitializer()
  * The context initializer is called when the runtime creates the extension context instance.
 */
-void ContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet);
+void AirChartboostContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet);
 
-/* ContextFinalizer()
+/* AirChartboostContextFinalizer()
  * The context finalizer is called when the extension's ActionScript code
  * calls the ExtensionContext instance's dispose() method.
- * If the AIR runtime garbage collector disposes of the ExtensionContext instance, the runtime also calls ContextFinalizer().
+ * If the AIR runtime garbage collector disposes of the ExtensionContext instance, the runtime also calls AirChartboostContextFinalizer().
 */
-void ContextFinalizer(FREContext ctx);
+void AirChartboostContextFinalizer(FREContext ctx);
 
 

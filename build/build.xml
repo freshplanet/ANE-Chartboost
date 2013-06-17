@@ -99,6 +99,7 @@
             <arg line="-platform default -C default/ ."/>
         </exec>
 
+	<move file="../temp/swc/${name}.swc" todir="../bin"/>
         <move file="../temp/${name}.ane" todir="../bin"/>
         <delete dir="../temp"/>
     </target>
