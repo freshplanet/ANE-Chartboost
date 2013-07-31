@@ -1,7 +1,7 @@
 //
 //  Chartboost.h
 //  Chartboost
-//  3.2
+//  3.2.1
 //
 //  Created by Kenneth Ballenegger on 8/1/11.
 //  Copyright 2011 Chartboost. All rights reserved.
